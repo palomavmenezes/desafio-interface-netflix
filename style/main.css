@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --vermelho: #E50914;
+    --preto: #141414;
+    --cinza: #AAA;
+    --branco: #fff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--preto);
+    color: var(--branco);
+    font-family: 'Arial', Times, serif;
+}
+
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header h2.logo {
+    font-family: 'Bebas Neue', cursive;
+    color: var(--vermelho);
+    font-weight: 500;
+    letter-spacing: 3px;
+    font-size: 3rem;
+    margin-left: 10px;
+}
+
+header nav {
+    margin-right: 10px;
+}
+
+header nav a {
+    color: var(--cinza);
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+header nav a:hover {
+    color: var(--branco);
+}
+
+.container {
+    margin: 20px;
+}
+
+/* CSS Seção Filme */
+.filme-principal {
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.70)100%), url('/img/banner-principal-arcane.jpg') no-repeat center;
+    background-size: cover;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal p.description {
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.filme-principal .titulo img {
+    width: 300px;
+    height: auto;
+}
+
+.filme-principal p.description {
+    width: 50%;
+}
+
+.btn {
+    background-color: rgba(0,0,0,.50);
+    border: 1px solid rgba(0,0,0,.50);
+    color: var(--branco);
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background-color: var(--branco);
+    color: #141414;
+    transition: .3s ease all;
+    box-shadow: 3px 2px 15px #4b4b4b;
+
+}
+
+.box-filme {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.filmes .categoria {
+    padding: 15px;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 700px) {
+    header .container {
+        flex-direction: column;
+    }
+    .btn {margin-top: 10px;}
+
+    header nav {
+        margin-right: 0px;
+    }
+
+    header h2.logo {
+        margin-left: 0;
+    }
+
+    .filme-principal p.description {
+        width: 100%;
+    }
+
+    .filme-principal {
+        justify-content: end;
+        padding-bottom: 30px;
+    }
+}
